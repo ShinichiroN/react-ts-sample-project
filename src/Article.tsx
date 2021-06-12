@@ -1,11 +1,14 @@
 import React from 'react';
 
-const Article = (props) => {
+interface ArticleProps {
+    title: string,
+    content: string,
+}
+const Article = (props:ArticleProps) => {
     return (
         <>
             <h2>{props.title}</h2>
-            {/* <h3>{props.text}</h3> */}
-            <h3>{props.isPublished}</h3>
+            <p>{props.content}</p>
         </>
     )
 }
